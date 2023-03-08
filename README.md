@@ -186,15 +186,6 @@ Te das cuenta que existe una diferencia en el .php cuand o mandas el correo
 
 ```
 
-### JSON WEB Token 
-
-Nos damos cuenta al decodificar base64 que se trata de un jwt lo que hacemos es ir a la pagina
-
-> https://jwt.io/
-
-Hasta aqui no podemos hacer nada porque el jwt es como un hmac
-
-![image](https://user-images.githubusercontent.com/63270579/223812451-9cf2e9a7-3d4c-4f5f-866d-d379d5737062.png)
 
 
 ### Backups
@@ -267,9 +258,43 @@ else
 
 
 
+### JSON WEB Token 
+
+Nos damos cuenta al decodificar base64 que se trata de un jwt lo que hacemos es ir a la pagina
+
+> https://jwt.io/
+
+Hasta aqui no podemos hacer nada porque el jwt es como un hmac
+
+![image](https://user-images.githubusercontent.com/63270579/223812451-9cf2e9a7-3d4c-4f5f-866d-d379d5737062.png)
 
 
 
+## http://player.htb/launcher/7F2dcsSdZo6nj3SNMTQ1/ (Subida de archivos)
+
+Se intenta subir direfentes archivos como dice media pues subimos algo de video 
+
+![image](https://user-images.githubusercontent.com/63270579/223825812-635336b9-7dee-4158-96e2-d6004650a30f.png)
+
+
+```
+file 656636429.avi 
+
+656636429.avi: RIFF (little-endian) data, AVI, 300 x 168, 25.00 fps, video: FFMpeg MPEG-4
+
+```
+
+Buscamos en google "FFMpeg"
+
+> FFmpeg es una colección de software libre que puede grabar, convertir y hacer streaming de audio y vídeo. Incluye libavcodec, una biblioteca de códecs. FFmpeg está desarrollado en GNU/Linux, pero puede ser compilado en la mayoría de los sistemas operativos, incluyendo Windows.
+
+# Buscar exploits
+
+"FFMpeg github exploit"
+
+> https://github.com/cujanovic/SSRF-Testing/blob/master/ffmpeg/gen_avi.py
+
+Entonces podemos leer archivos del servidor.
 
 
 
