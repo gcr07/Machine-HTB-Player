@@ -87,6 +87,65 @@ username=test&password=Password&theme=default&language=en
 
 ```
 
+### Se encontro una cabecera extraña
+
+la cual contiene algunas rutas antes de redirigir a 501.php
+
+```
+GET /contact.php?firstname=masa&subject=aaaa 
+
+
+
+array(3) {
+  [0]=>
+  array(4) {
+    ["file"]=>
+    string(28) "/var/www/staging/contact.php"
+    ["line"]=>
+    int(6)
+    ["function"]=>
+    string(1) "c"
+    ["args"]=>
+    array(1) {
+      [0]=>
+      &string(9) "Cleveland"
+    }
+  }
+  [1]=>
+  array(4) {
+    ["file"]=>
+    string(28) "/var/www/staging/contact.php"
+    ["line"]=>
+    int(3)
+    ["function"]=>
+    string(1) "b"
+    ["args"]=>
+    array(1) {
+      [0]=>
+      &string(5) "Glenn"
+    }
+  }
+  [2]=>
+  array(4) {
+    ["file"]=>
+    string(28) "/var/www/staging/contact.php"
+    ["line"]=>
+    int(11)
+    ["function"]=>
+    string(1) "a"
+    ["args"]=>
+    array(1) {
+      [0]=>
+      &string(5) "Peter"
+    }
+  }
+}
+Database connection failed.<html><br />Unknown variable user in /var/www/backup/service_config fatal error in /var/www/staging/fix.php
+
+
+```
+
+
 ### player.htb
 
 ```
@@ -119,6 +178,13 @@ ________________________________________________
 
 ```
 
+Te das cuenta que existe una diferencia en el .php cuand o mandas el correo
+
+```
+/launcher/dee8dc8a47256c64630d803a4c40786e.php
+/launcher/dee8dc8a47256c64630d803a4c40786c.php?
+
+```
 
 
 
