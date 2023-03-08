@@ -90,7 +90,8 @@ username=test&password=Password&theme=default&language=en
 ### player.htb
 
 ```
-![image](https://user-images.githubusercontent.com/63270579/223784663-4396b26e-f258-4fd1-b669-1aacba3f1eb7.png)
+![image](https://user-images.githubusercontent.com/63270579/223784744-7a76fda7-a1c2-4b41-b805-4e93a4fd98b4.png)
+
 
 ```
 
