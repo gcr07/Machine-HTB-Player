@@ -40,6 +40,33 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
+## Vhosting
+
+```
+ffuf -fc 400,404,403 -t 1000 -w  /opt/SecLists/Discovery/DNS/subdomains-top1million-110000.txt -u http://player.htb/ -H "Host: FUZZ.player.htb"
+wfuzz -c --hc=404,403 -t 1000 -w /opt/SecLists/Discovery/DNS/shubs-subdomains.txt  -H "Host: FUZZ.player.htb"  http://player.htb
+
+```
+
+![image](https://user-images.githubusercontent.com/63270579/223590512-5e2949c1-c648-4fa3-9202-f40bb62c474b.png)
+
+![image](https://user-images.githubusercontent.com/63270579/223591508-fc67bab0-c8eb-4820-8aa8-a38eb3a98b35.png)
+
+
+### chat.player.htb
+
+![image](https://user-images.githubusercontent.com/63270579/223592582-a2371cc9-f1af-4a0e-a611-7a9d542f5080.png)
+
+
+
+
+### dev.player.htb
+
+
+
+### staging.player.htb
+
+
 
 
 
