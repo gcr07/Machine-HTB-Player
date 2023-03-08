@@ -62,12 +62,30 @@ wfuzz -c --hc=404,403 -t 1000 -w /opt/SecLists/Discovery/DNS/shubs-subdomains.tx
 
 ### dev.player.htb
 
+![image](https://user-images.githubusercontent.com/63270579/223761179-dc5d5bd6-1f65-4663-91c8-d2be71a6b3a1.png)
+
+### POST 
+
+```
+POST /components/user/controller.php?action=authenticate
+username=test&password=Password&theme=default&language=en
+```
 
 
 ### staging.player.htb
 
 
+```
+[Status: 200, Size: 818, Words: 190, Lines: 45, Duration: 226ms]
+    * FUZZ: contact.php
 
+[Status: 200, Size: 1642, Words: 171, Lines: 88, Duration: 229ms]
+    * FUZZ: update.php
+
+[Status: 500, Size: 0, Words: 1, Lines: 1, Duration: 107ms]
+    * FUZZ: fix.php
+
+```
 
 
 
