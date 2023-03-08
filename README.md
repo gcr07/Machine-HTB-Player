@@ -186,7 +186,42 @@ Te das cuenta que existe una diferencia en el .php cuand o mandas el correo
 
 ```
 
+### JSON WEB Token 
 
+Nos damos cuenta al decodificar base64 que se trata de un jwt lo que hacemos es ir a la pagina
+
+> https://jwt.io/
+
+Hasta aqui no podemos hacer nada porque el jwt es como un hmac
+
+### Backups
+
+Si en el chat dice que se tienen archivos expuestos pues buscamos backups que se quedon por ahi.
+
+```
+bfac -u http://player.htb/launcher/dee8dc8a47256c64630d803a4c40786c.php
+----------------------------------------------------------------------
+                 _____ _____ _____ _____
+                | __  |   __|  _  |     |
+                | __ -|   __|     |   --|
+                |_____|__|  |__|__|_____|
+
+           -:::Backup File Artifacts Checker:::-
+                     Version: 1.4
+  Advanced Backup-File Artifacts Testing for Web-Applications
+Author: Mazin Ahmed | <mazin AT mazinahmed DOT net> | @mazen160
+----------------------------------------------------------------------
+
+
+[i] URL: http://player.htb/launcher/dee8dc8a47256c64630d803a4c40786c.php
+[$] Discovered: -> {http://player.htb/launcher/dee8dc8a47256c64630d803a4c40786c.php~} (Response-Code: 200 | Content-Length: 742)
+                                                                                                 
+[i] Findings:
+http://player.htb/launcher/dee8dc8a47256c64630d803a4c40786c.php~ (200) | (Content-Length: 742)
+
+[i] Finished performing scan.
+
+```
 
 
 
