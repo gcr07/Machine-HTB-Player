@@ -90,7 +90,31 @@ username=test&password=Password&theme=default&language=en
 ### player.htb
 
 ```
-![image](https://user-images.githubusercontent.com/63270579/223784744-7a76fda7-a1c2-4b41-b805-4e93a4fd98b4.png)
+
+        /'___\  /'___\           /'___\       
+       /\ \__/ /\ \__/  __  __  /\ \__/       
+       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
+        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
+         \ \_\   \ \_\  \ \____/  \ \_\       
+          \/_/    \/_/   \/___/    \/_/       
+
+       v2.0.0-dev
+________________________________________________
+
+ :: Method           : GET
+ :: URL              : http://player.htb/FUZZ
+ :: Wordlist         : FUZZ: /opt/SecLists/Discovery/Web-Content/directory-list-1.0.txt
+ :: Follow redirects : false
+ :: Calibration      : false
+ :: Timeout          : 10
+ :: Threads          : 1000
+ :: Matcher          : Response status: 200,204,301,302,307,401,403,405,500
+ :: Filter           : Response words: 175
+ :: Filter           : Response status: 404,403
+________________________________________________
+
+[Status: 301, Size: 310, Words: 20, Lines: 10, Duration: 104ms]
+    * FUZZ: launcher
 
 
 ```
