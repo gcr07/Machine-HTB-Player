@@ -194,6 +194,9 @@ Nos damos cuenta al decodificar base64 que se trata de un jwt lo que hacemos es 
 
 Hasta aqui no podemos hacer nada porque el jwt es como un hmac
 
+![image](https://user-images.githubusercontent.com/63270579/223812451-9cf2e9a7-3d4c-4f5f-866d-d379d5737062.png)
+
+
 ### Backups
 
 Si en el chat dice que se tienen archivos expuestos pues buscamos backups que se quedon por ahi.
@@ -221,6 +224,45 @@ http://player.htb/launcher/dee8dc8a47256c64630d803a4c40786c.php~ (200) | (Conten
 
 [i] Finished performing scan.
 
+```
+
+### De /launcher/dee8dc8a47256c64630d803a4c40786c.php~
+
+Entonces aqui solo une las piezas si ese codigo es ese pues te redireccion Location: es igual a redireccion. si no setea una nueva Cookie. Ahora si tenemos el password y el codigo podriamos generar una cookie que al decifrar nos llevara a la pagina de location pues justo eso se hizo.
+
+```
+php
+require 'vendor/autoload.php';
+
+use \Firebase\JWT\JWT;
+
+if(isset($_COOKIE["access"]))
+{
+	$key = '_S0_R@nd0m_P@ss_';
+	$decoded = JWT::decode($_COOKIE["access"], base64_decode(strtr($key, '-_', '+/')), ['HS256']);
+	if($decoded->access_code === "0E76658526655756207688271159624026011393")
+	{
+		header("Location: 7F2xxxxxxxxxxxxx/");
+	}
+	else
+	{
+		header("Location: index.html");
+	}
+}
+else
+{
+	$token_payload = [
+	  'project' => 'PlayBuff',
+	  'access_code' => 'C0B137FE2D792459F26FF763CCE44574A5B5AB03'
+	];
+	$key = '_S0_R@nd0m_P@ss_';
+	$jwt = JWT::encode($token_payload, base64_decode(strtr($key, '-_', '+/')), 'HS256');
+	$cookiename = 'access';
+	setcookie('access',$jwt, time() + (86400 * 30), "/");
+	header("Location: index.html");
+}
+
+?>
 ```
 
 
