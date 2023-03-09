@@ -303,10 +303,7 @@ gen_avi.py file://var/www/backup/service_config videoout.avi
 
 El video de ese archivo nos deja ver:
 
-```
 ![image](https://user-images.githubusercontent.com/63270579/224101508-f29356b9-b4b5-445a-9dce-a17441b0dbd8.png)
-
-```
 
 Vamos a intentar ingresar con esas credenciales en ambos servicios.
 
