@@ -312,8 +312,20 @@ telegen / d-bC|jC!2uepS/w
 
 ```
 
+# Primer acceso a la maquina
+
+Se obtuvo acceso mediante telegen en el puerto 6686 pero si vemos tiene una lshell buscamos en google 
 
 
+> Si se desea que un usuario pueda entrar en un sistema por SSH y que tenga una shell limitada, lShell es la solución
+
+Entonces necesitamos otra estrategia.
+
+>  para escapar y a pesar de consultar el contenido de /etc/lshell.conf a través del exploit FFMpeg para buscar un punto débil a dicha shell no encontramos nada para poder avanzar por este camino.
+
+Sabemos que el OpenSSH vercion 7 es vulnerable
+
+![image](https://user-images.githubusercontent.com/63270579/224112359-c3f287a8-ef1c-4da2-946e-ee1dbf910b38.png)
 
 
 
