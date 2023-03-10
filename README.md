@@ -406,7 +406,13 @@ Como el buff.php se ejecuta comno root todo lo que ejecute sera en el contexto d
 
 
 
+# Bibliografia
 
+Reverse Shell PHP pentester monkey
+
+> https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php
+
+> https://tamimhasan404.medium.com/ffuf-tips-and-tricks-90fbe12e7c79
 
 
 
