@@ -374,11 +374,18 @@ stty rows 38 columns 167
 
 ## pspy64
 
+![image](https://user-images.githubusercontent.com/63270579/224194236-7f7b9908-82ed-452d-8624-17fdf6ad7958.png)
+
+
 Para ver los procesos que corren incluso con permisos de root.
 
 ```
-
+/var/lib/playbuff/buff.php
 ```
+
+encontramos que ese archivo incluye esto.
+
+> include("/var/www/html/launcher/dee8dc8a47256c64630d803a4c40786g.php");
 
 
 
