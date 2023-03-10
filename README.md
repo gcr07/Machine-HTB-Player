@@ -323,17 +323,62 @@ Entonces necesitamos otra estrategia.
 
 >  para escapar y a pesar de consultar el contenido de /etc/lshell.conf a través del exploit FFMpeg para buscar un punto débil a dicha shell no encontramos nada para poder avanzar por este camino.
 
+## OpenSSH 7.2p1 - (Authenticated) xauth Command Injection
+
 Sabemos que el OpenSSH vercion 7 es vulnerable
 
 ![image](https://user-images.githubusercontent.com/63270579/224112359-c3f287a8-ef1c-4da2-946e-ee1dbf910b38.png)
 
+obtenemos credenciales 
 
+```
+//peter
+//CQXpm\z)G5D#%S$y=
+```
 
+### dev.player.htb
 
+Con las credenciales de peter accedemos al portal y vemos que se puede crear un proyecto nuevo quiza podemos ejecutar comandos de algun modo.
 
+La ruta que nos permite escribir es /var/www/demo/home
 
+```
+/var/www/demo/home/masa
 
+```
+Y aqui intentamos creer un nuevo archivo .php
 
+```
+<?php phpinfo(); ?>
+
+```
+Vemos que esta interpretando codigo php 
+
+![image](https://user-images.githubusercontent.com/63270579/224190810-c0cbe450-428a-4b1e-b775-10c59b811081.png)
+
+## Fully TTY
+
+```
+script /dev/null -c bash
+ctrl+Z
+stty raw -echo
+fg
+[1]  + continued  nc -lvnp 1234 (output)
+                                       reset
+xterm
+export TERM=xterm
+export SHELL=bash
+stty -a # Para ver el tamaño de las filas y columnas
+stty rows 38 columns 167
+```
+
+## pspy64
+
+Para ver los procesos que corren incluso con permisos de root.
+
+```
+
+```
 
 
 
