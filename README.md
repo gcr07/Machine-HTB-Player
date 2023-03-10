@@ -387,6 +387,10 @@ encontramos que ese archivo incluye esto.
 
 > include("/var/www/html/launcher/dee8dc8a47256c64630d803a4c40786g.php");
 
+Como el buff.php se ejecuta comno root todo lo que ejecute sera en el contexto de root por lo tanto si incluimos un archivo shell reversa lo ejecutara
+
+![image](https://user-images.githubusercontent.com/63270579/224199245-e183d535-1c2b-499a-a951-4cccb2324e5b.png)
+
 
 
 
